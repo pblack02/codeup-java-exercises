@@ -24,10 +24,15 @@ public class HelloWorld {
         System.out.println(x);
 
         String theNumberThree = "three";
+        System.out.println(theNumberThree);
         Object o = theNumberThree;
+        System.out.println(o);
         int three = (int) o;
-
+//a string can not be cast as an int
         System.out.println(three);
+
+
+
 
 
 
