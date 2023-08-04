@@ -10,6 +10,10 @@ public class MethodsExercises {
         return numberOne + numberTwo;
     }
 
+    public static double addition(double numberOne, double numberTwo) {
+        return numberOne + numberTwo;
+    }
+
     public static int subtraction(int numberOne, int numberTwo) {
         return numberOne - numberTwo;
     }
@@ -27,18 +31,23 @@ public class MethodsExercises {
     }
 
     public static int getInteger(int min, int max) {
+        Scanner scanner = new Scanner(System.in);
+        int userInput;
         do {
-            Scanner scanner = new Scanner(System.in);
             System.out.println("Enter a number between " + min + " and " + max);
-            int userInput = scanner.nextInt();
-            if (userInput > min && userInput < max) {
-                System.out.println(userInput);
-            } else {
-                System.out.println("Please enter a correct value.");
+            while (!scanner.hasNextInt()) {
+                String input = scanner.next();
+                System.out.println("Invalid input. Please enter a number.");
             }
-            return userInput;
-        } while (true);
+            userInput = scanner.nextInt();
+            if (userInput < min || userInput > max) {
+                System.out.println("Please enter a number within the correct range.");
+            }
+        } while (userInput < min || userInput > max);
+        System.out.println(userInput);
+        return userInput;
     }
+
 
     public static void rollDice() {
         Scanner scanner = new Scanner(System.in);
@@ -60,14 +69,15 @@ public class MethodsExercises {
 
 
     public static void main(String[] args) {
-        System.out.println(addition(3, 2));
+//        System.out.println(addition(3, 2));
+//        System.out.println(addition(14, 27));
 //        System.out.println(subtraction(3,2));
 //        System.out.println(multiply(3,2));
 //        System.out.println(divide(10,2));
 //        System.out.println(modules(50,10));
 
         int userInput = getInteger(1, 10);
-        rollDice();
+//        rollDice();
 
 
 
