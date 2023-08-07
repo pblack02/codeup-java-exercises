@@ -23,7 +23,7 @@ public class Person {
         Person person2 = new Person();
         person2.name = "john";
 //        System.out.println(getName(person2.name));
-//        System.out.println(getName(person1.name).equals(getName(person2.name)));
+//        System.out.println(person1.getName().equals(person2.getName()));
 //        System.out.println(person1 == person2);
 //
 ////         we are setting them equal to each-other: outcome is true.

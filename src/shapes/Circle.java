@@ -7,13 +7,12 @@ public class Circle {
 
     public static int ciclesMade = 0;
 
-    public void setRadius(double radius){
+    public Circle(double radius){
         this.radius = radius;
     }
 
     public double getArea(){
-       double area = (PI * ((int)Math.pow(radius, 2)));
-        return area;
+        return (PI * ((int)Math.pow(radius, 2)));
     }
 
     public double getCircumference(){
