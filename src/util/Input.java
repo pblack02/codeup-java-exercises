@@ -16,9 +16,9 @@ public class Input {
     }
 
     public boolean yesNo() {
-        System.out.println("Would you like to continue?");
         String userInput = this.scanner.next();
-        if (userInput.equalsIgnoreCase("yes") | userInput.equalsIgnoreCase("y")) {
+        this.scanner.nextLine();
+        if (userInput.equalsIgnoreCase("yes") || userInput.equalsIgnoreCase("y")) {
             return true;
         } else {
             return false;
