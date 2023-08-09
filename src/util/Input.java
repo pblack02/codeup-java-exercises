@@ -40,7 +40,7 @@ public class Input {
            return Integer.parseInt(this.getString());
        } catch (NumberFormatException e){
            System.out.println("You must enter a whole number");
-           return this.getInt();
+           return Integer.parseInt(this.getString());
        }
     }
 
@@ -59,11 +59,31 @@ public class Input {
 
 
     public double getDouble() {
-        System.out.println("Pick a double");
-        double userInput = this.scanner.nextDouble();
-        return userInput;
+        try{
+            return Double.parseDouble(this.getString());
+        } catch (NumberFormatException e){
+            System.out.println("You must enter a decimal number");
+            return Double.parseDouble(this.getString());
+        }
     }
 
+    public int getBinary (){
+        try{
+            return Integer.parseInt(getString(), 2);
+        } catch (NumberFormatException e){
+            System.out.println("Please enter a binary");
+            return Integer.parseInt(getString(), 2);
+        }
+    }
+
+    public int getHex (){
+        try{
+            return Integer.parseInt(getString(), 16);
+        } catch (NumberFormatException e){
+            System.out.println("Please enter a hexadecimal");
+            return Integer.parseInt(getString(), 16);
+        }
+    }
 
 }
 
