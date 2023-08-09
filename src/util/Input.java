@@ -40,7 +40,7 @@ public class Input {
            return Integer.parseInt(this.getString());
        } catch (NumberFormatException e){
            System.out.println("You must enter a whole number");
-           return Integer.parseInt(this.getString());
+           return getInt();
        }
     }
 
@@ -63,7 +63,7 @@ public class Input {
             return Double.parseDouble(this.getString());
         } catch (NumberFormatException e){
             System.out.println("You must enter a decimal number");
-            return Double.parseDouble(this.getString());
+            return getDouble();
         }
     }
 
